@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  logChange(index){
-    console.log(index)
-  }
+  selectedValue: string;
 }
