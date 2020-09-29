@@ -5,7 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { FormsModule } from '@angular/forms';
 
 const material = [
   MatButtonModule,
@@ -13,7 +14,9 @@ const material = [
   MatIconModule,
   MatBadgeModule,
   MatProgressSpinnerModule,
-  MatToolbarModule 
+  MatToolbarModule,
+  MatSidenavModule,
+  FormsModule
 ];
 
 @NgModule({

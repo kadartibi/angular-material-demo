@@ -6,13 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'material-demo';
-  notifications = 2;
-  showSpinner = false;
-  loadData(){
-    this.showSpinner = true;
-    setTimeout(() =>{
-      this.showSpinner = false;
-    }, 5000)
+  opened = false;
+  log(state){
+    console.log(state)
   }
 }

@@ -1,8 +1,10 @@
-<mat-toolbar color="primary" class="navbar">
-    <div>Toolbar</div>
-    <div>
-        <span>Home</span>
-        <span>About</span>
-        <span>Services</span>
-    </div>
-</mat-toolbar>
+<mat-sidenav-container>
+    <!-- mode types: over(default) push side-->
+    <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')"mode="side" [(opened)]="opened">Sidenav</mat-sidenav>
+    <mat-sidenav-content>
+        <button (click)="opened = !opened">Toggle Sidebar</button>
+        <button (click)="sidenav.open()">Open</button>
+        <button (click)="sidenav.close()">Close</button>
+        <button (click)="sidenav.toggle()">Toggle</button>
+    </mat-sidenav-content>
+</mat-sidenav-container>
