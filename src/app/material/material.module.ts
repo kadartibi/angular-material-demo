@@ -7,6 +7,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { FormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
 
 const material = [
   MatButtonModule,
@@ -16,7 +17,8 @@ const material = [
   MatProgressSpinnerModule,
   MatToolbarModule,
   MatSidenavModule,
-  FormsModule
+  FormsModule,
+  MatMenuModule
 ];
 
 @NgModule({
