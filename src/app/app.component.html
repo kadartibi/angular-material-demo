@@ -1,13 +1,9 @@
-<mat-card> 
-    <mat-card-title>
-        Card title
-    </mat-card-title>
-    <mat-card-content>
-        This is the card content
-    </mat-card-content>
-    <mat-card-actions align="end">
-        <button mat-flat-button>Login</button>
-    </mat-card-actions>
-</mat-card>
+<mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+    <mat-tab label="Angular">Angular content</mat-tab>
+    <mat-tab label="React">React content</mat-tab>
+    <mat-tab label="Vue">Vue content</mat-tab>
 
+</mat-tab-group>
+<br/>
+{{tabRef.selectedIndex}}
 
