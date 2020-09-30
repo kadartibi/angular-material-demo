@@ -29,7 +29,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
+  /*displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
   displayedColumnsData: string[] = ['position', 'name', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
 
@@ -45,6 +45,12 @@ export class AppComponent implements OnInit{
   }
   applyFilter(filterValue: string){
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }*/
+  numbers = []
+  constructor(){
+    for(let i = 0; i < 1000; i++){
+      this.numbers.push(i)
+    }
   }
 }
 
