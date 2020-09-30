@@ -28,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent /*implements OnInit*/{
   /*displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
   displayedColumnsData: string[] = ['position', 'name', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
