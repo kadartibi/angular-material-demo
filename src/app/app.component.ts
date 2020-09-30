@@ -8,30 +8,12 @@ import { map, startWith } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  selectedValue: string;
-  options: string[] = ['Angular', 'React', 'Vue']
-  objectOptions = [
-    {name: 'Angular'},
-    {name: 'Angular Material'},
-    {name: 'React'},
-    {name: 'Vue'}
-  ];
-  myControl = new FormControl();
+export class AppComponent{
+  minDate = new Date();
+  maxDate = new Date(2020, 10, 30)
 
-  filteredOptions: Observable<string[]>;
-  ngOnInit(){
-    this.filteredOptions= this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    )
-  }
-  private _filter(value: string) : string[]{
-    const filterValue = value.toLowerCase()
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
-  }
-
-  displayFn(subject) {
-    return subject ? subject.name : undefined
+  dateFilter= date =>{
+    const day = date.getDay();
+    return day !== 0 && day !== 6
   }
 }
