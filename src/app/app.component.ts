@@ -1,5 +1,6 @@
-import { Component} from '@angular/core';
+import { Component, ViewChild, OnInit} from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
 
 export interface PeriodicElement {
   name: string;
@@ -26,10 +27,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
   displayedColumns: string[] = ['position', 'name', 'symbol', 'weight'];
   displayedColumnsData: string[] = ['position', 'name', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+
+  @ViewChild(MatSort,{static: true}) sort: MatSort;
+  ngOnInit(){
+    this.dataSource.sort = this.sort;
+  }
 
   logData(row){
     console.log(row)
